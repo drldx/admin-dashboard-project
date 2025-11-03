@@ -17,22 +17,10 @@ body{
   grid-template-columns: 1fr 4fr;
 }
 
-.aside, .header, .main {
+/* .aside, .header, .main {
   border: 1px solid white;
-}
+} */
 
-.aside{
-  background-color: rgb(200, 153, 153);
-  grid-column: 1 / 2;
-  grid-row: 1 / 4; 
-  display: grid;
-  gap: 20px;
-}
-.aside ul{
-  list-style-type: none;
-  border: 2px solid;
-  text-align: left;
-}
 
 .header{
   grid-area: 1 / 2 / 2 / 3;
@@ -167,7 +155,7 @@ main .project-articles{
 }
 .trending-article article div{
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 0fr 2fr;
   gap: 0rem 0.5rem;
 }
 .trending-article article div img{
@@ -180,4 +168,35 @@ main .project-articles{
 .trending-article article div p:last-child{
   font-size: .9rem;
   color: grey;
+}
+
+
+
+.aside{
+  background-color: #80808091;
+  grid-area: 1 / 1 / 4 / 2;
+  display: grid;
+  gap: 3rem;
+  padding: 1rem;
+  align-content: start;
+}
+.aside ul li,
+.aside > div{
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 0fr 2fr;
+  gap: .5rem;
+  padding: .6rem 1rem;
+  align-self: start;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+.aside ul li img{
+  width: 40px;
+}
+.aside div img{
+  width: 60px;
+}
+.aside div h2{
+  align-self: center;
 }
