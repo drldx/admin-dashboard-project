@@ -10,7 +10,6 @@
 
 body{
   font-family: Roboto, monospace;
-  text-align: center;
 }
 
 .container{
@@ -23,7 +22,7 @@ body{
 }
 
 .aside{
-  background-color: rgb(255, 156, 156);
+  background-color: rgb(200, 153, 153);
   grid-column: 1 / 2;
   grid-row: 1 / 4; 
   display: grid;
@@ -102,17 +101,42 @@ body{
   display: grid;
   grid-template-columns: 3fr 1fr;
   gap: 15px;
-  padding: 15px;
+  padding: 1rem;
 }
 main .article-group{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   gap: 15px;
-  padding: 15px;
+}
+.article-group article{
+  /* height: 240px; */
+  padding: 1.5rem 1rem ;
+  background-color: white;
+  border-radius: 8px;
+  border-left: 10px solid #ffc601; 
+  box-shadow: 2px 3px 1px 0px #8989894a;
+  display: grid;
+  grid-template-rows: 1fr 5fr;
+}
+.article-group article p:first-child{
+  font-size: 1.3rem;
+  align-self: end;
+}
+.article-group article p:nth-child(2){
+  color: grey;
+  max-width: 40ch;
+}
+.article-group article > div{
+  display: flex;
+  justify-content: end;
+  gap: 1.2rem;
 }
 main .project-articles{
   grid-row: span 2;
+  padding: 15px;
 }
-.article-group article{
-  height: 200px;
-}
+.project-articles > p{
+  text-align: left;
+  font-size: 1.3rem;
+  padding: 0 0 .5rem 0;
+} 
