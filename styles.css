@@ -135,7 +135,9 @@ main .project-articles{
   grid-row: span 2;
   /* padding: 15px; */
 }
-.project-articles > p, .announce-article > p{
+.project-articles > p, 
+.announce-article > p, 
+.trending-article > p{
   text-align: left;
   font-size: 1.3rem;
   padding: 0 0 .5rem 0;
@@ -144,7 +146,8 @@ main .project-articles{
 /* .announce-article{
   padding: 15px;
 } */
-.announce-article article{
+.announce-article article,
+.trending-article article{
   background-color: white;
   border-radius: 8px;
   box-shadow: 2px 3px 1px 0px #8989894a;
@@ -157,4 +160,24 @@ main .project-articles{
   color: grey;
   font-size: .8rem;
   max-width: 30ch;
+}
+
+.trending-article article{
+  padding: 1.5rem 2rem ;
+}
+.trending-article article div{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 0rem 0.5rem;
+}
+.trending-article article div img{
+  grid-area: 1 / 1 / 3 / 2;
+  background-color: #80808091;
+  border-radius: 100px;
+  height: 50px;
+  width: 50px;
+}
+.trending-article article div p:last-child{
+  font-size: .9rem;
+  color: grey;
 }
