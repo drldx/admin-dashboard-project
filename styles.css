@@ -3,24 +3,28 @@
   padding: 0;
   box-sizing: border-box;
 }
-/* optional font */
+
 :root{
   font-size: 18px;
 }
 
 body{
-  font-family: Roboto, monospace;
+  font-family: Inconsolata, monospace;
+}
+
+.container,
+.header .profile-bar div:first-child,
+.main,
+.main .article-group,
+.article-group article,
+.trending-article article div
+{
+  display: grid;
 }
 
 .container{
-  display: grid;
   grid-template-columns: 1fr 4fr;
 }
-
-/* .aside, .header, .main {
-  border: 1px solid white;
-} */
-
 
 .header{
   grid-area: 1 / 2 / 2 / 3;
@@ -28,14 +32,17 @@ body{
   box-shadow: 2px 1px 20px 0px #0000002b;
   z-index: 1;
 }
-.header > div{
+.header > div,
+.search-bar div,
+.article-group article > div{
   display: flex;
+}
+.header > div{
   justify-content: space-between;
   align-items: center;
   padding: 0px 2rem;
 }
 .header .profile-bar div:first-child{
-  display: grid;
   grid-template-columns: 1fr 3fr;
   gap: 0rem 1rem;
 }
@@ -43,7 +50,6 @@ body{
   grid-area: 1 / 1 / 3 / 2 ;
 }
 .search-bar div{
-  display: flex;
   padding: 1.5rem 0px;   
 }
 .search-bar div:first-child{
@@ -79,7 +85,7 @@ body{
   border: none;
   border-radius: 50px;
   color: white;
-  background-color: #837b5f; 
+  background-color: #648e6c; 
   padding: .7rem 2rem;
   margin: 0px .5rem;
   font-size: 1rem;
@@ -88,25 +94,22 @@ body{
 .main{
   background-color: #837b5f24;
   grid-area: 2 / 2 / 4 / 3; 
-  display: grid;
   grid-template-columns: 3fr 1fr;
-  gap: 1.5rem;
   padding: 2rem 1.5rem 2rem 1rem;
 }
 main .article-group{
-  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+.main,
+main .article-group{
   gap: 1.5rem;
 }
 .article-group article{
-  /* height: 240px; */
   padding: 1.5rem 1rem ;
   background-color: white;
   border-radius: 8px;
-  border-left: 10px solid #b6ac8a; 
+  border-left: 10px solid #508f5c; 
   box-shadow: 2px 3px 1px 0px #8989894a;
-  display: grid;
-  grid-template-rows: 1fr 5fr;
 }
 .article-group article p:first-child{
   font-size: 1.3rem;
@@ -117,13 +120,11 @@ main .article-group{
   max-width: 40ch;
 }
 .article-group article > div{
-  display: flex;
   justify-content: end;
   gap: 1.2rem;
 }
 main .project-articles{
   grid-row: span 2;
-  /* padding: 15px; */
 }
 .project-articles > p, 
 .announce-article > p, 
@@ -156,7 +157,6 @@ main .project-articles{
   padding: 1.5rem 2rem ;
 }
 .trending-article article div{
-  display: grid;
   grid-template-columns: 0fr 2fr;
   gap: 0rem 0.5rem;
 }
